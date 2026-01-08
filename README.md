@@ -8,7 +8,15 @@
 - 可以透過在Line傳信息，讓樹莓派發送系統紀錄最近十次的門磁感應、QR code、開啟門超過10秒的紀錄
 ## 安裝方式
 - ```bash
-- git clone https://github.com/Yojhu/Python_program_final_13.git
-- cd Python_program_final_13
-- pip install -r requirements.txt
-## 執行如何
+  git clone https://github.com/Yojhu/Python_Program_final_13.git
+  cd Python_program_final_13
+  pip install -r requirements.txt
+## 如何執行
+- 在line_env檔案夾中的QR.py的第134行 pi_ip =""中空改為當前樹莓派主機區域網路IP
+- 在line_env檔案夾中的.env的 LINE_CHANNEL_ACCESS_TOKEN \ LINE_CHANNEL_SECRET \ LINE_USER_ID 改成自己的
+- 使用ngrok服務
+- 執行test.py
+- 在樹莓派主機執行
+- sudo snap install ngrok
+- ngrok config add-authtoken abc (abc為agrok網站上的authtoken)
+- ngrok http 5000
